@@ -1,0 +1,435 @@
+cdac@DESKTOP-NC5N6HE:~$ ls
+IO.sh  Myfile.txt  Myfolder  Mynew.bat  hello.sh  newVariable.sh  rohit.txt  variables.sh
+cdac@DESKTOP-NC5N6HE:~$ kelvish
+total 56
+drwxr-x--- 5 cdac cdac 4096 Aug 28 01:58 .
+drwxr-xr-x 3 root root 4096 Aug 27 22:57 ..
+-rw------- 1 cdac cdac 1651 Aug 28 01:58 .bash_history
+-rw-r--r-- 1 cdac cdac  220 Aug 27 22:57 .bash_logout
+-rw-r--r-- 1 cdac cdac 3795 Aug 28 00:00 .bashrc
+drwx------ 2 cdac cdac 4096 Aug 27 22:59 .cache
+drwxr-xr-x 3 cdac cdac 4096 Aug 27 22:59 .local
+-rw-r--r-- 1 cdac cdac    0 Aug 28 00:01 .motd_shown
+-rw-r--r-- 1 cdac cdac  807 Aug 27 22:57 .profile
+-rw-r--r-- 1 cdac cdac    0 Aug 27 23:38 .sudo_as_admin_successful
+-rw------- 1 cdac cdac 1689 Aug 28 00:00 .viminfo
+-rw-r--r-- 1 cdac cdac  139 Aug 28 01:58 IO.sh
+-rw-r--r-- 1 cdac cdac    0 Aug 28 01:02 Myfile.txt
+drwxr-xr-x 2 cdac cdac 4096 Aug 28 00:22 Myfolder
+-rw-r--r-- 1 cdac cdac    0 Aug 27 23:01 Mynew.bat
+-rwxrwxrwx 1 cdac cdac  189 Aug 28 01:33 hello.sh
+-rw-r--r-- 1 cdac cdac   31 Aug 28 01:46 newVariable.sh
+-rw-r--r-- 1 cdac cdac    0 Aug 27 22:59 rohit.txt
+-rw-r--r-- 1 cdac cdac  128 Aug 28 01:46 variables.sh
+cdac@DESKTOP-NC5N6HE:~$ cls
+Command 'cls' not found, but there are 18 similar ones.
+cdac@DESKTOP-NC5N6HE:~$ sudo adduser user2
+[sudo] password for cdac:
+Adding user `user2' ...
+Adding new group `user2' (1001) ...
+Adding new user `user2' (1001) with group `user2' ...
+Creating home directory `/home/user2' ...
+Copying files from `/etc/skel' ...
+New password:
+Retype new password:
+passwd: password updated successfully
+Changing the user information for user2
+Enter the new value, or press ENTER for the default
+        Full Name []: ROHIT
+        Room Number []: 2002
+        Work Phone []: 7798022259
+        Home Phone []: 9359421806
+cdac@DESKTOP-NC5N6HE:/home$
+Is the information correct? [Y/n] Y
+cdac@DESKTOP-NC5N6HE:~$ ls -l
+total 20
+-rw-r--r-- 1 cdac cdac  139 Aug 28 01:58 IO.sh
+-rw-r--r-- 1 cdac cdac    0 Aug 28 01:02 Myfile.txt
+drwxr-xr-x 2 cdac cdac 4096 Aug 28 00:22 Myfolder
+-rw-r--r-- 1 cdac cdac    0 Aug 27 23:01 Mynew.bat
+-rwxrwxrwx 1 cdac cdac  189 Aug 28 01:33 hello.sh
+-rw-r--r-- 1 cdac cdac   31 Aug 28 01:46 newVariable.sh
+-rw-r--r-- 1 cdac cdac    0 Aug 27 22:59 rohit.txt
+-rw-r--r-- 1 cdac cdac  128 Aug 28 01:46 variables.sh
+cdac@DESKTOP-NC5N6HE:~$ sudo chown user2 rohit.txt
+cdac@DESKTOP-NC5N6HE:~$ ls -l
+total 20
+-rw-r--r-- 1 cdac  cdac  139 Aug 28 01:58 IO.sh
+-rw-r--r-- 1 cdac  cdac    0 Aug 28 01:02 Myfile.txt
+drwxr-xr-x 2 cdac  cdac 4096 Aug 28 00:22 Myfolder
+-rw-r--r-- 1 cdac  cdac    0 Aug 27 23:01 Mynew.bat
+-rwxrwxrwx 1 cdac  cdac  189 Aug 28 01:33 hello.sh
+-rw-r--r-- 1 cdac  cdac   31 Aug 28 01:46 newVariable.sh
+-rw-r--r-- 1 user2 cdac    0 Aug 27 22:59 rohit.txt
+-rw-r--r-- 1 cdac  cdac  128 Aug 28 01:46 variables.sh
+cdac@DESKTOP-NC5N6HE:~$ su user1
+su: user user1 does not exist or the user entry does not contain all the required fields
+cdac@DESKTOP-NC5N6HE:~$ su user
+su: user user does not exist or the user entry does not contain all the required fields
+cdac@DESKTOP-NC5N6HE:~$ su user2
+Password:
+
+user2@DESKTOP-NC5N6HE:/home/cdac$
+user2@DESKTOP-NC5N6HE:/home/cdac$
+user2@DESKTOP-NC5N6HE:/home/cdac$ cd ~
+user2@DESKTOP-NC5N6HE:~$ ls
+user2@DESKTOP-NC5N6HE:~$ ls -a -l
+total 20
+drwxr-x--- 2 user2 user2 4096 Aug 28 09:49 .
+drwxr-xr-x 4 root  root  4096 Aug 28 09:49 ..
+-rw-r--r-- 1 user2 user2  220 Aug 28 09:49 .bash_logout
+-rw-r--r-- 1 user2 user2 3771 Aug 28 09:49 .bashrc
+-rw-r--r-- 1 user2 user2  807 Aug 28 09:49 .profile
+user2@DESKTOP-NC5N6HE:~$ cd /home/cdac
+bash: cd: /home/cdac: Permission denied
+user2@DESKTOP-NC5N6HE:~$ ls -al
+total 20
+drwxr-x--- 2 user2 user2 4096 Aug 28 09:49 .
+drwxr-xr-x 4 root  root  4096 Aug 28 09:49 ..
+-rw-r--r-- 1 user2 user2  220 Aug 28 09:49 .bash_logout
+-rw-r--r-- 1 user2 user2 3771 Aug 28 09:49 .bashrc
+-rw-r--r-- 1 user2 user2  807 Aug 28 09:49 .profile
+user2@DESKTOP-NC5N6HE:~$ cd /
+user2@DESKTOP-NC5N6HE:/$ ls -al
+total 2152
+drwxr-xr-x  19 root root    4096 Aug 28 08:45 .
+drwxr-xr-x  19 root root    4096 Aug 28 08:45 ..
+lrwxrwxrwx   1 root root       7 Nov 23  2023 bin -> usr/bin
+drwxr-xr-x   2 root root    4096 Apr 18  2022 boot
+drwxr-xr-x  16 root root    3560 Aug 28 08:45 dev
+drwxr-xr-x  73 root root    4096 Aug 28 09:52 etc
+drwxr-xr-x   4 root root    4096 Aug 28 09:49 home
+-rwxrwxrwx   1 root root 2127224 Apr 25 23:47 init
+lrwxrwxrwx   1 root root       7 Nov 23  2023 lib -> usr/lib
+lrwxrwxrwx   1 root root       9 Nov 23  2023 lib32 -> usr/lib32
+lrwxrwxrwx   1 root root       9 Nov 23  2023 lib64 -> usr/lib64
+lrwxrwxrwx   1 root root      10 Nov 23  2023 libx32 -> usr/libx32
+drwx------   2 root root   16384 Aug 27 22:56 lost+found
+drwxr-xr-x   2 root root    4096 Nov 23  2023 media
+drwxr-xr-x   7 root root    4096 Aug 27 22:57 mnt
+drwxr-xr-x   2 root root    4096 Nov 23  2023 opt
+dr-xr-xr-x 188 root root       0 Aug 28 08:45 proc
+drwx------   4 root root    4096 Aug 27 23:00 root
+drwxr-xr-x  19 root root     580 Aug 28 09:33 run
+lrwxrwxrwx   1 root root       8 Nov 23  2023 sbin -> usr/sbin
+drwxr-xr-x   8 root root    4096 Nov 23  2023 snap
+drwxr-xr-x   2 root root    4096 Nov 23  2023 srv
+dr-xr-xr-x  11 root root       0 Aug 28 08:45 sys
+drwxrwxrwt  10 root root    4096 Aug 28 09:00 tmp
+drwxr-xr-x  14 root root    4096 Nov 23  2023 usr
+drwxr-xr-x  13 root root    4096 Nov 23  2023 var
+user2@DESKTOP-NC5N6HE:/$ cd ~
+user2@DESKTOP-NC5N6HE:~$ sudo ls
+[sudo] password for user2:
+user2 is not in the sudoers file.  This incident will be reported.
+user2@DESKTOP-NC5N6HE:~$ ls -al
+total 20
+drwxr-x--- 2 user2 user2 4096 Aug 28 09:49 .
+drwxr-xr-x 4 root  root  4096 Aug 28 09:49 ..
+-rw-r--r-- 1 user2 user2  220 Aug 28 09:49 .bash_logout
+-rw-r--r-- 1 user2 user2 3771 Aug 28 09:49 .bashrc
+-rw-r--r-- 1 user2 user2  807 Aug 28 09:49 .profile
+user2@DESKTOP-NC5N6HE:~$ cd /
+user2@DESKTOP-NC5N6HE:/$ cd home
+user2@DESKTOP-NC5N6HE:/home$ ls
+cdac  user2
+user2@DESKTOP-NC5N6HE:/home$ cd user2
+user2@DESKTOP-NC5N6HE:~$ cd home
+bash: cd: home: No such file or directory
+user2@DESKTOP-NC5N6HE:~$ cd /
+user2@DESKTOP-NC5N6HE:/$ cd home
+user2@DESKTOP-NC5N6HE:/home$ cd /user2
+bash: cd: /user2: No such file or directory
+user2@DESKTOP-NC5N6HE:/home$ cd cdac
+bash: cd: cdac: Permission denied
+user2@DESKTOP-NC5N6HE:/home$ cd /cdac
+bash: cd: /cdac: No such file or directory
+user2@DESKTOP-NC5N6HE:/home$ ls
+cdac  user2
+user2@DESKTOP-NC5N6HE:/home$ cd cdac/
+bash: cd: cdac/: Permission denied
+user2@DESKTOP-NC5N6HE:/home$ su cdac
+Password:
+cdac@DESKTOP-NC5N6HE:/home$ cd ~
+cdac@DESKTOP-NC5N6HE:~$ ls
+IO.sh  Myfile.txt  Myfolder  Mynew.bat  hello.sh  newVariable.sh  rohit.txt  variables.sh
+cdac@DESKTOP-NC5N6HE:~$ pwd
+/home/cdac
+cdac@DESKTOP-NC5N6HE:~$ cd /etc/sudoers
+bash: cd: /etc/sudoers: Not a directory
+cdac@DESKTOP-NC5N6HE:~$ cd etc/
+bash: cd: etc/: No such file or directory
+cdac@DESKTOP-NC5N6HE:~$ cd /etc/
+cdac@DESKTOP-NC5N6HE:/etc$ ls
+PackageKit                     groff           modules              screenrc
+X11                            group           modules-load.d       security
+adduser.conf                   group-          mtab                 selinux
+alternatives                   gshadow         nanorc               services
+apparmor                       gshadow-        netconfig            shadow
+apparmor.d                     gss             netplan              shadow-
+apport                         hdparm.conf     networkd-dispatcher  shells
+apt                            host.conf       networks             skel
+bash.bashrc                    hostname        newt                 ssh
+bash_completion                hosts           nftables.conf        ssl
+bash_completion.d              init.d          nsswitch.conf        subgid
+bindresvport.blacklist         inputrc         opt                  subgid-
+binfmt.d                       iproute2        os-release           subuid
+byobu                          issue           pam.conf             subuid-
+ca-certificates                issue.net       pam.d                sudo.conf
+ca-certificates.conf           kernel          passwd               sudo_logsrvd.conf
+ca-certificates.conf.dpkg-old  ld.so.cache     passwd-              sudoers
+console-setup                  ld.so.conf      perl                 sudoers.d
+cron.d                         ld.so.conf.d    pm                   sysctl.conf
+cron.daily                     ldap            polkit-1             sysctl.d
+cron.hourly                    legal           profile              systemd
+cron.monthly                   libaudit.conf   profile.d            terminfo
+cron.weekly                    libnl-3         protocols            timezone
+crontab                        locale.alias    python3              tmpfiles.d
+dbus-1                         locale.gen      python3.10           ubuntu-advantage
+debconf.conf                   localtime       rc0.d                ucf.conf
+debian_version                 logcheck        rc1.d                udev
+default                        login.defs      rc2.d                ufw
+deluser.conf                   logrotate.conf  rc3.d                update-manager
+depmod.d                       logrotate.d     rc4.d                update-motd.d
+dhcp                           lsb-release     rc5.d                vim
+dpkg                           machine-id      rc6.d                vtrgb
+e2scrub.conf                   magic           rcS.d                wgetrc
+environment                    magic.mime      resolv.conf          wsl.conf
+ethertypes                     manpath.config  rmt                  xattr.conf
+fstab                          mime.types      rpc                  xdg
+fuse.conf                      mke2fs.conf     rsyslog.conf         zsh_command_not_found
+gai.conf                       modprobe.d      rsyslog.d
+cdac@DESKTOP-NC5N6HE:/etc$ sudo nano sudoers
+cdac@DESKTOP-NC5N6HE:/etc$ sudo ls
+PackageKit                     groff           modules              screenrc
+X11                            group           modules-load.d       security
+adduser.conf                   group-          mtab                 selinux
+alternatives                   gshadow         nanorc               services
+apparmor                       gshadow-        netconfig            shadow
+apparmor.d                     gss             netplan              shadow-
+apport                         hdparm.conf     networkd-dispatcher  shells
+apt                            host.conf       networks             skel
+bash.bashrc                    hostname        newt                 ssh
+bash_completion                hosts           nftables.conf        ssl
+bash_completion.d              init.d          nsswitch.conf        subgid
+bindresvport.blacklist         inputrc         opt                  subgid-
+binfmt.d                       iproute2        os-release           subuid
+byobu                          issue           pam.conf             subuid-
+ca-certificates                issue.net       pam.d                sudo.conf
+ca-certificates.conf           kernel          passwd               sudo_logsrvd.conf
+ca-certificates.conf.dpkg-old  ld.so.cache     passwd-              sudoers
+console-setup                  ld.so.conf      perl                 sudoers.d
+cron.d                         ld.so.conf.d    pm                   sysctl.conf
+cron.daily                     ldap            polkit-1             sysctl.d
+cron.hourly                    legal           profile              systemd
+cron.monthly                   libaudit.conf   profile.d            terminfo
+cron.weekly                    libnl-3         protocols            timezone
+crontab                        locale.alias    python3              tmpfiles.d
+dbus-1                         locale.gen      python3.10           ubuntu-advantage
+debconf.conf                   localtime       rc0.d                ucf.conf
+debian_version                 logcheck        rc1.d                udev
+default                        login.defs      rc2.d                ufw
+deluser.conf                   logrotate.conf  rc3.d                update-manager
+depmod.d                       logrotate.d     rc4.d                update-motd.d
+dhcp                           lsb-release     rc5.d                vim
+dpkg                           machine-id      rc6.d                vtrgb
+e2scrub.conf                   magic           rcS.d                wgetrc
+environment                    magic.mime      resolv.conf          wsl.conf
+ethertypes                     manpath.config  rmt                  xattr.conf
+fstab                          mime.types      rpc                  xdg
+fuse.conf                      mke2fs.conf     rsyslog.conf         zsh_command_not_found
+gai.conf                       modprobe.d      rsyslog.d
+cdac@DESKTOP-NC5N6HE:/etc$ su user2
+Password:
+user2@DESKTOP-NC5N6HE:/etc$ ls
+PackageKit                     groff           modules              screenrc
+X11                            group           modules-load.d       security
+adduser.conf                   group-          mtab                 selinux
+alternatives                   gshadow         nanorc               services
+apparmor                       gshadow-        netconfig            shadow
+apparmor.d                     gss             netplan              shadow-
+apport                         hdparm.conf     networkd-dispatcher  shells
+apt                            host.conf       networks             skel
+bash.bashrc                    hostname        newt                 ssh
+bash_completion                hosts           nftables.conf        ssl
+bash_completion.d              init.d          nsswitch.conf        subgid
+bindresvport.blacklist         inputrc         opt                  subgid-
+binfmt.d                       iproute2        os-release           subuid
+byobu                          issue           pam.conf             subuid-
+ca-certificates                issue.net       pam.d                sudo.conf
+ca-certificates.conf           kernel          passwd               sudo_logsrvd.conf
+ca-certificates.conf.dpkg-old  ld.so.cache     passwd-              sudoers
+console-setup                  ld.so.conf      perl                 sudoers.d
+cron.d                         ld.so.conf.d    pm                   sysctl.conf
+cron.daily                     ldap            polkit-1             sysctl.d
+cron.hourly                    legal           profile              systemd
+cron.monthly                   libaudit.conf   profile.d            terminfo
+cron.weekly                    libnl-3         protocols            timezone
+crontab                        locale.alias    python3              tmpfiles.d
+dbus-1                         locale.gen      python3.10           ubuntu-advantage
+debconf.conf                   localtime       rc0.d                ucf.conf
+debian_version                 logcheck        rc1.d                udev
+default                        login.defs      rc2.d                ufw
+deluser.conf                   logrotate.conf  rc3.d                update-manager
+depmod.d                       logrotate.d     rc4.d                update-motd.d
+dhcp                           lsb-release     rc5.d                vim
+dpkg                           machine-id      rc6.d                vtrgb
+e2scrub.conf                   magic           rcS.d                wgetrc
+environment                    magic.mime      resolv.conf          wsl.conf
+ethertypes                     manpath.config  rmt                  xattr.conf
+fstab                          mime.types      rpc                  xdg
+fuse.conf                      mke2fs.conf     rsyslog.conf         zsh_command_not_found
+gai.conf                       modprobe.d      rsyslog.d
+user2@DESKTOP-NC5N6HE:/etc$ cd /
+user2@DESKTOP-NC5N6HE:/$ ls
+bin   dev  home  lib    lib64   lost+found  mnt  proc  run   snap  sys  usr
+boot  etc  init  lib32  libx32  media       opt  root  sbin  srv   tmp  var
+user2@DESKTOP-NC5N6HE:/$ cd /home
+user2@DESKTOP-NC5N6HE:/home$ ls
+cdac  user2
+user2@DESKTOP-NC5N6HE:/home$ cd cdac/
+bash: cd: cdac/: Permission denied
+user2@DESKTOP-NC5N6HE:/home$ sudo cd cdac/
+[sudo] password for user2:
+sudo: cd: command not found
+sudo: "cd" is a shell built-in command, it cannot be run directly.
+sudo: the -s option may be used to run a privileged shell.
+sudo: the -D option may be used to run a command in a specific directory.
+user2@DESKTOP-NC5N6HE:/home$ su cdac
+Password:
+cdac@DESKTOP-NC5N6HE:/home$ ls
+cdac  user2
+cdac@DESKTOP-NC5N6HE:/home$
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+cdac@DESKTOP-NC5N6HE:/home$ ls
+cdac  user2
+cdac@DESKTOP-NC5N6HE:/home$ cd /usr/
+cdac@DESKTOP-NC5N6HE:/usr$ ls
+bin  games  include  lib  lib32  lib64  libexec  libx32  local  sbin  share  src
+cdac@DESKTOP-NC5N6HE:/usr$ cd ..
+cdac@DESKTOP-NC5N6HE:/$ ls
+bin   dev  home  lib    lib64   lost+found  mnt  proc  run   snap  sys  usr
+boot  etc  init  lib32  libx32  media       opt  root  sbin  srv   tmp  var
+cdac@DESKTOP-NC5N6HE:/$ cd home/
+cdac@DESKTOP-NC5N6HE:/home$ ls
+cdac  user2
+cdac@DESKTOP-NC5N6HE:/home$ su cdac
+Password:
+cdac@DESKTOP-NC5N6HE:/home$ cd user2/
+bash: cd: user2/: Permission denied
+cdac@DESKTOP-NC5N6HE:/home$ cd ~
+cdac@DESKTOP-NC5N6HE:~$ ls
+IO.sh  Myfile.txt  Myfolder  Mynew.bat  hello.sh  newVariable.sh  rohit.txt  variables.sh
+cdac@DESKTOP-NC5N6HE:~$ nano Day2fileHello.txt
+cdac@DESKTOP-NC5N6HE:~$ cat Day2fileHello.txt
+hello
+hii
+gn
+gm
+see u
+all the best
+tata
+have a great day
+good work
+yooo
+
+cdac@DESKTOP-NC5N6HE:~$ head -5 Day2fileHello.txt
+hello
+hii
+gn
+gm
+see u
+cdac@DESKTOP-NC5N6HE:~$ tail -5 Day2fileHello.txt
+tata
+have a great day
+good work
+yooo
+
+cdac@DESKTOP-NC5N6HE:~$ head Day2fileHello.txt
+hello
+hii
+gn
+gm
+see u
+all the best
+tata
+have a great day
+good work
+yooo
+cdac@DESKTOP-NC5N6HE:~$ nano Day2fileHello.txt
+cdac@DESKTOP-NC5N6HE:~$ cat Day2fileHello.txt
+hello
+hii
+gn
+gm
+see u
+all the best
+tata
+have a great day
+good work
+yooo
+#changed
+yessssss
+
+
+cdac@DESKTOP-NC5N6HE:~$ head Day2fileHello.txt
+hello
+hii
+gn
+gm
+see u
+all the best
+tata
+have a great day
+good work
+yooo
+cdac@DESKTOP-NC5N6HE:~$
+
+////////////////////////////////////////
+
+cdac@DESKTOP-NC5N6HE:~$ ls
+Day2fileHello.txt  Myfolder   newVariable.sh
+IO.sh              Mynew.bat  rohit.txt
+Myfile.txt         hello.sh   variables.sh
+cdac@DESKTOP-NC5N6HE:~$ cd /Myfolder
+bash: cd: /Myfolder: No such file or directory
+cdac@DESKTOP-NC5N6HE:~$ cd /Myfolder/
+bash: cd: /Myfolder/: No such file or directory
+cdac@DESKTOP-NC5N6HE:~$ cd Myfolder/
+cdac@DESKTOP-NC5N6HE:~/Myfolder$ ls
+cdac@DESKTOP-NC5N6HE:~/Myfolder$ ls -a -l
+total 8
+drwxr-xr-x 2 cdac cdac 4096 Aug 28 00:22 .
+drwxr-x--- 5 cdac cdac 4096 Aug 28 10:29 ..
+cdac@DESKTOP-NC5N6HE:~/Myfolder$ cd ..
+cdac@DESKTOP-NC5N6HE:~$ ls
+Day2fileHello.txt  Myfolder   newVariable.sh
+IO.sh              Mynew.bat  rohit.txt
+Myfile.txt         hello.sh   variables.sh
+cdac@DESKTOP-NC5N6HE:~$ cat rohit.txt
+cdac@DESKTOP-NC5N6HE:~$ cat > Day2file3.txt
+game1
+game2
+game3
+game4
+game5
+cdac@DESKTOP-NC5N6HE:~$ ls
+Day2file3.txt      Myfile.txt  hello.sh        variables.sh
+Day2fileHello.txt  Myfolder    newVariable.sh
+IO.sh              Mynew.bat   rohit.txt
+cdac@DESKTOP-NC5N6HE:~$ cat Day2file3.txt
+game1
+game2
+game3
+game4
+cdac@DESKTOP-NC5N6HE:~$ head -2 Day2file3.txt > Day2file3RedirectedOutput.txt
+cdac@DESKTOP-NC5N6HE:~$ cat Day2file3RedirectedOutput.txt
+game1
+game2
+cdac@DESKTOP-NC5N6HE:~$ tail -1 Day2file3RedirectedOutput.txt > newFileDay2file3Re
+directedOutput.txt
+cdac@DESKTOP-NC5N6HE:~$ cat newFileDay2file3RedirectedOutput.txt
+game2
+cdac@DESKTOP-NC5N6HE:~$
